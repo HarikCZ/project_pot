@@ -7,9 +7,7 @@ export const Heading = () => {
             <Link href='/'>Home</Link>
             <Link href='/about'>About us</Link>
             <Link href='/contacts'>Contacts</Link>
-            <Link href='/news'>
-                <a>News</a>
-            </Link>
+            <a href='./news.tsx'>News</a>
             
         </div>
     </div>
