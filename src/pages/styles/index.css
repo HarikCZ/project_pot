@@ -93,6 +93,10 @@
     font-size: 18px;
     /* min-height: 4rem; */
   }
+
+  .topnav .login-container{
+    float: right;
+  }
   
   /* Change the color of links on hover */
   .topnav a:hover {
@@ -123,5 +127,49 @@
     
     text-shadow: var(--color) 20%;
   }
+
+  .addbutton{
+    display: inline-block;
+    text-decoration: none;
+    background: var(--topnav-green);
+    color: var(--secondary-font-color);
+    width: 5vw;
+    height: 5vw;
+    line-height: 5vw;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: bold;
+    position: fixed;
+    bottom: 2vw; right: 2vw;
+  }
+
+  .addbutton:hover{
+    background-color: #333;
+    color: white;
+  }
+
+  .contacts-article{
+    max-width: 15rem;
+    text-align: center;
+    font-display: block;
+    width: auto;
+    min-height: 10rem;
+    max-width: 45rem;
+    margin: 5rem auto;
+  
+    line-height: 2vw;
+
+    background-color: var(--backgrounColor);
+    text-shadow: var(--color) 20%;
+  }
+
+  .qrcode{
+    max-width: 15rem;
+    align-items: center;
+  }
+
+  
+
+  
 
   

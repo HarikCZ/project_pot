@@ -2,9 +2,6 @@ import React from "react";
 
 import { Card, CardContent, CardMedia, Typography } from '@material-ui/core';
 
-import flowerimage from '../src/images/flowerimage.jpg';
-
-
 export const Tile = () => {
     return <>
         <Card>
@@ -12,11 +9,10 @@ export const Tile = () => {
                 component="img"
                 alt="obrázek překrásné květinky"
                 height="140"
-                image={flowerimage}
+                image="./flowerimage.jpg"
                 title="kytička"
             />
-
-            
+        
         <CardContent>
             <Typography variant="h5">
                 Název květiny
@@ -27,7 +23,5 @@ export const Tile = () => {
       </CardContent>
     </Card>
 
-        
-    
     </>       
 }

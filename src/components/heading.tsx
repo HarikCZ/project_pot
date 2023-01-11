@@ -5,16 +5,24 @@ export const Heading = () => {
     return <div>
        <div className='topnav'>
             <Link href='/'> 
-                <a>Home</a> 
+                Home
             </Link>
+
             <Link href='/about'>
-                <a>About us</a>
+                About us
             </Link>
-            <Link href='/contacts'>Contacts</Link>
+ 
+            <Link href='/contacts'>
+                Contacts
+            </Link>
+ 
             <Link href='/news'>
-                <a>News</a>
+                News
             </Link>
-            
+
+            <Link href='/login' className='login-container'>
+                Login
+            </Link>
         </div>
     </div>
 }
