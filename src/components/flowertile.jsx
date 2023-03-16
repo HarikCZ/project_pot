@@ -1,9 +1,18 @@
-import React from "react";
+
 
 import { Card, CardContent, CardMedia, Typography } from '@material-ui/core';
 
-export const Tile = () => {
+
+
+
+//init services
+
+
+export const Tile = ({data}) => {
+    
     return <>
+        
+        
         <Card>
             <CardMedia
                 component="img"
@@ -15,13 +24,15 @@ export const Tile = () => {
         
         <CardContent>
             <Typography variant="h5">
-                Název květiny
+                {data.name}
             </Typography>
             <Typography variant="body2" color="textSecondary">
-                Následný popis dat ohledně květiny
+                <p>Teplota vzduchu: {data.airtemp}°C</p>
+                <p>Vlhkost vzduchu: {data.airhum}%</p>
             </Typography>
       </CardContent>
     </Card>
 
-    </>       
+    </> 
+ 
 }

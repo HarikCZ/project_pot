@@ -2,7 +2,7 @@ import { NextPage } from "next";
 import { Heading } from '../components/heading'
 
 
-const Contacts: NextPage = () => {
+const Contacts = () => {
     return <>
         <div className="contacts">
             <Heading/>

@@ -1,8 +1,8 @@
-import { NextPage } from "next";
+
 import { Heading } from '../components/heading'
 
 
-const News: NextPage = () => {
+const News = () => {
     return <>
         <div className="news-page">
             <Heading/>

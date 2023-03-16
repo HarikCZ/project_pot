@@ -1,4 +1,4 @@
-export const AppStyles: any = {
+export const AppStyles = {
     cardStyle: {
         width: '400px',
         margin: 'auto',

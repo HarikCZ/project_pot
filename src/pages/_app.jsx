@@ -10,7 +10,7 @@ import createEmotionCache from '../createEmotionCache';
 import './styles/index.css'
 
 const clientSideEmotionCache = createEmotionCache();
-export default function MyApp(props: { Component: any; pageProps: any; }) {
+export default function MyApp(props) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
 
   return (

@@ -19,10 +19,6 @@ export const Heading = () => {
             <Link href='/news'>
                 News
             </Link>
-
-            <Link href='/login' className='login-container'>
-                Login
-            </Link>
         </div>
     </div>
 }
