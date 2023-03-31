@@ -1,5 +1,5 @@
 import React from "react";
-import { AddButton } from "./addbutton";
+
 import { FlowerGrid } from "./flowergrid";
 import { Heading } from "./heading";
 
@@ -11,7 +11,7 @@ export const MainUI = () => {
             <Heading/>
 
             <FlowerGrid/>
-            <AddButton/>
+
 
 
         </div>

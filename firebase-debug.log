@@ -1,0 +1,84 @@
+[debug] [2023-03-16T20:52:59.783Z] ----------------------------------------------------------------------
+[debug] [2023-03-16T20:52:59.784Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2023-03-16T20:52:59.785Z] CLI Version:   11.24.0
+[debug] [2023-03-16T20:52:59.785Z] Platform:      darwin
+[debug] [2023-03-16T20:52:59.785Z] Node Version:  v16.16.0
+[debug] [2023-03-16T20:52:59.785Z] Time:          Thu Mar 16 2023 21:52:59 GMT+0100 (Středoevropský standardní čas)
+[debug] [2023-03-16T20:52:59.785Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-03-16T20:52:59.816Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-03-16T20:52:59.816Z] > authorizing via signed-in user (kuba.harcarik@gmail.com)
+[debug] [2023-03-16T20:52:59.817Z] [iam] checking project project-pot-e8a0a for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-03-16T20:52:59.817Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/project-pot-e8a0a:testIamPermissions [none]
+[debug] [2023-03-16T20:52:59.817Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/project-pot-e8a0a:testIamPermissions x-goog-quota-user=projects/project-pot-e8a0a
+[debug] [2023-03-16T20:52:59.818Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/project-pot-e8a0a:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-03-16T20:53:00.607Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/project-pot-e8a0a:testIamPermissions 200
+[debug] [2023-03-16T20:53:00.607Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/project-pot-e8a0a:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-03-16T20:53:00.609Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/project-pot-e8a0a [none]
+[debug] [2023-03-16T20:53:00.859Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/project-pot-e8a0a 200
+[debug] [2023-03-16T20:53:00.859Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/project-pot-e8a0a {"projectId":"project-pot-e8a0a","projectNumber":"792344260857","displayName":"project-pot","name":"projects/project-pot-e8a0a","resources":{"hostingSite":"project-pot-e8a0a","realtimeDatabaseInstance":"project-pot-e8a0a-default-rtdb","storageBucket":"project-pot-e8a0a.appspot.com","locationId":"europe-west"},"state":"ACTIVE","etag":"1_5b50a2d5-648f-458d-92db-a17e4d438496"}
+[debug] [2023-03-16T20:53:01.606Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/project-pot-e8a0a/sites pageToken=&pageSize=10
+[debug] [2023-03-16T20:53:02.628Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/project-pot-e8a0a/sites 200
+[debug] [2023-03-16T20:53:02.628Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/project-pot-e8a0a/sites {"sites":[{"name":"projects/project-pot-e8a0a/sites/project-pot-e8a0a","defaultUrl":"https://project-pot-e8a0a.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2023-03-16T20:53:02.630Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/project-pot-e8a0a/sites 
+[debug] [2023-03-16T20:53:03.598Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/project-pot-e8a0a/sites 200
+[debug] [2023-03-16T20:53:03.598Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/project-pot-e8a0a/sites {"sites":[{"name":"projects/project-pot-e8a0a/sites/project-pot-e8a0a","defaultUrl":"https://project-pot-e8a0a.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2023-03-16T20:53:03.599Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/project-pot-e8a0a/webApps/-/config [none]
+[debug] [2023-03-16T20:53:04.418Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/project-pot-e8a0a/webApps/-/config 200
+[debug] [2023-03-16T20:53:04.419Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/project-pot-e8a0a/webApps/-/config {"projectId":"project-pot-e8a0a","appId":"1:792344260857:web:cc320fd22a5675c4123228","databaseURL":"https://project-pot-e8a0a-default-rtdb.europe-west1.firebasedatabase.app","storageBucket":"project-pot-e8a0a.appspot.com","locationId":"europe-west","apiKey":"AIzaSyBSFJrOKaTr2n9d0Avp3EluZ9wV5IZ2i0s","authDomain":"project-pot-e8a0a.firebaseapp.com","messagingSenderId":"792344260857"}
+[debug] [2023-03-16T20:53:12.626Z] Error: Build optimization failed: found pages without a React Component as default export in 
+pages/styles/AppStyles
+pages/add
+
+See https://nextjs.org/docs/messages/page-without-valid-component for more info.
+
+    at /Users/jakubharcarik/Desktop/project_pot/node_modules/next/dist/build/index.js:1132:29
+    at async Span.traceAsyncFn (/Users/jakubharcarik/Desktop/project_pot/node_modules/next/dist/trace/trace.js:79:20)
+    at async build (/Users/jakubharcarik/Desktop/project_pot/node_modules/next/dist/build/index.js:66:29)
+    at async build (/usr/local/lib/node_modules/firebase-tools/lib/frameworks/next/index.js:55:5)
+    at async prepareFrameworks (/usr/local/lib/node_modules/firebase-tools/lib/frameworks/index.js:261:108)
+    at async deploy (/usr/local/lib/node_modules/firebase-tools/lib/deploy/index.js:53:13)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-03-16T20:54:09.067Z] ----------------------------------------------------------------------
+[debug] [2023-03-16T20:54:09.068Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2023-03-16T20:54:09.068Z] CLI Version:   11.24.0
+[debug] [2023-03-16T20:54:09.068Z] Platform:      darwin
+[debug] [2023-03-16T20:54:09.068Z] Node Version:  v16.16.0
+[debug] [2023-03-16T20:54:09.068Z] Time:          Thu Mar 16 2023 21:54:09 GMT+0100 (Středoevropský standardní čas)
+[debug] [2023-03-16T20:54:09.069Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-03-16T20:54:09.100Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-03-16T20:54:09.100Z] > authorizing via signed-in user (kuba.harcarik@gmail.com)
+[debug] [2023-03-16T20:54:09.100Z] [iam] checking project project-pot-e8a0a for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-03-16T20:54:09.101Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/project-pot-e8a0a:testIamPermissions [none]
+[debug] [2023-03-16T20:54:09.101Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/project-pot-e8a0a:testIamPermissions x-goog-quota-user=projects/project-pot-e8a0a
+[debug] [2023-03-16T20:54:09.101Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/project-pot-e8a0a:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-03-16T20:54:09.864Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/project-pot-e8a0a:testIamPermissions 200
+[debug] [2023-03-16T20:54:09.864Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/project-pot-e8a0a:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-03-16T20:54:09.865Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/project-pot-e8a0a [none]
+[debug] [2023-03-16T20:54:10.181Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/project-pot-e8a0a 200
+[debug] [2023-03-16T20:54:10.182Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/project-pot-e8a0a {"projectId":"project-pot-e8a0a","projectNumber":"792344260857","displayName":"project-pot","name":"projects/project-pot-e8a0a","resources":{"hostingSite":"project-pot-e8a0a","realtimeDatabaseInstance":"project-pot-e8a0a-default-rtdb","storageBucket":"project-pot-e8a0a.appspot.com","locationId":"europe-west"},"state":"ACTIVE","etag":"1_5b50a2d5-648f-458d-92db-a17e4d438496"}
+[debug] [2023-03-16T20:54:10.914Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/project-pot-e8a0a/sites pageToken=&pageSize=10
+[debug] [2023-03-16T20:54:11.887Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/project-pot-e8a0a/sites 200
+[debug] [2023-03-16T20:54:11.888Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/project-pot-e8a0a/sites {"sites":[{"name":"projects/project-pot-e8a0a/sites/project-pot-e8a0a","defaultUrl":"https://project-pot-e8a0a.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2023-03-16T20:54:11.889Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/project-pot-e8a0a/sites 
+[debug] [2023-03-16T20:54:12.925Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/project-pot-e8a0a/sites 200
+[debug] [2023-03-16T20:54:12.925Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/project-pot-e8a0a/sites {"sites":[{"name":"projects/project-pot-e8a0a/sites/project-pot-e8a0a","defaultUrl":"https://project-pot-e8a0a.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2023-03-16T20:54:12.926Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/project-pot-e8a0a/webApps/-/config [none]
+[debug] [2023-03-16T20:54:13.628Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/project-pot-e8a0a/webApps/-/config 200
+[debug] [2023-03-16T20:54:13.629Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/project-pot-e8a0a/webApps/-/config {"projectId":"project-pot-e8a0a","appId":"1:792344260857:web:cc320fd22a5675c4123228","databaseURL":"https://project-pot-e8a0a-default-rtdb.europe-west1.firebasedatabase.app","storageBucket":"project-pot-e8a0a.appspot.com","locationId":"europe-west","apiKey":"AIzaSyBSFJrOKaTr2n9d0Avp3EluZ9wV5IZ2i0s","authDomain":"project-pot-e8a0a.firebaseapp.com","messagingSenderId":"792344260857"}
+[debug] [2023-03-16T20:54:18.117Z] Error: Build optimization failed: found pages without a React Component as default export in 
+pages/styles/AppStyles
+pages/add
+
+See https://nextjs.org/docs/messages/page-without-valid-component for more info.
+
+    at /Users/jakubharcarik/Desktop/project_pot/node_modules/next/dist/build/index.js:1132:29
+    at async Span.traceAsyncFn (/Users/jakubharcarik/Desktop/project_pot/node_modules/next/dist/trace/trace.js:79:20)
+    at async build (/Users/jakubharcarik/Desktop/project_pot/node_modules/next/dist/build/index.js:66:29)
+    at async build (/usr/local/lib/node_modules/firebase-tools/lib/frameworks/next/index.js:55:5)
+    at async prepareFrameworks (/usr/local/lib/node_modules/firebase-tools/lib/frameworks/index.js:261:108)
+    at async deploy (/usr/local/lib/node_modules/firebase-tools/lib/deploy/index.js:53:13)
+[error] 
+[error] Error: An unexpected error has occurred.

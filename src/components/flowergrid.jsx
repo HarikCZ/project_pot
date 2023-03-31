@@ -6,6 +6,8 @@ import { Tile } from './flowertile';
 
 import {useState, useEffect} from 'react'
 
+import Link from 'next/link'
+
 import { 
     getFirestore,
     collection,
@@ -37,7 +39,7 @@ export const FlowerGrid = () => {
             const db = getFirestore()
 
             //collection ref
-            const colRef = collection(db, 'urmom')
+            const colRef = collection(db, 'jake')
 
             getDocs(colRef)
             .then((snapshot) => {
@@ -55,24 +57,29 @@ export const FlowerGrid = () => {
         }) 
     }, [refreshToken])
     
+    async function getStaticProps() {
+        const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+        const data = await res.json();
+        return { props: { data } };
+    }
+
     return<>
         <Grid container spacing={3} alignItems={"center"}>
-        
-             
-            
-                {flowers ?.map((kytka) => 
+            {flowers ?.map((kytka) => 
                 <Grid item xs={4} alignItems={'center'}>
-                    <Tile data={kytka}/>
+                    <Link href='/flowerdetail'>
+                        <Tile data={kytka}/> 
+                    </Link>
                 </Grid>    
             )}
             
             
             {/* {JSON.stringify(flowers)} */}
 
-
+                
         </Grid>
     </>
-}
+} 
 
 
 
