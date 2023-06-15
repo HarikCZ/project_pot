@@ -64,6 +64,7 @@ const Home = (props) => {
                 <p>Teplota vzduchu: {props.fsdata[0].airtemp}°C</p>
                 <p>Vlhkost vzduchu: {props.fsdata[0].airhum}%</p>
                 <p>Světlo v místnosti: {props.fsdata[0].light} Lux</p>
+                <p>Vlhkost půdy: {props.fsdata[0].potmoist}</p>
               </Box>
         </Box>
       </Flex>

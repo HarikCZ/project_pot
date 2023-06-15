@@ -43,7 +43,7 @@ const Home = () => {
         display='flex'
         alignItems='end'
         justifyContent='start'
-        bgImage="url('https://m.media-amazon.com/images/M/MV5BODM1MDgyNDU4M15BMl5BanBnXkFtZTgwNjY5Njg3MjE@._V1_.jpg')"
+        bgImage="url('https://i.etsystatic.com/26513788/r/il/157407/3177312354/il_570xN.3177312354_mp3g.jpg')"
         bgPosition='center'
         bgRepeat='no-repeat'
         boxSize='300'
