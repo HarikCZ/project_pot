@@ -68,7 +68,7 @@ const Navbar = (props) => {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={'center'}>
-            <Box><Link href="/">8===D</Link></Box>
+            <Box><Link href="/">PP🪴</Link></Box>
             <HStack
               as={'nav'}
               spacing={4}
