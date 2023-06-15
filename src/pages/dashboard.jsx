@@ -41,13 +41,41 @@ export async function getServerSideProps() {
 }
 
 const Home = (props) => {
-  console.log(props.fsdata)
   const { data: session } = useSession({ required: true })
 
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  const [flowers, setFlowers] = useState()
+  const [flowers, setFlowers] = useState([])
+  const [flowerIndex, setFlowerIndex] = useState(0)
   const [refreshToken, setRefreshToken] = useState(Math.random())
+
+  useEffect(() => {
+    if (!props.fsdata)
+      return;
+
+    for (let i = 0; i < props.fsdata.length; i++) {
+      props.fsdata[i].id = Math.random();
+    }
+
+    setFlowers(props.fsdata)
+    setFlowerIndex(Math.min(props.fsdata.length, flowerIndex))
+  }, [props.fsdata])
+
+  useEffect(() => {
+    fetch('/api/update').then(async (res) => {
+      const data = await res.json()
+
+      for (let i = 0; i < data.length; i++) {
+        data[i].id = Math.random();
+      }
+
+      setFlowers(data)
+
+      setTimeout(() => setRefreshToken(Math.random), 5000)
+      
+      console.log('refresh')
+    })
+  }, [refreshToken])
 
   /* <div style={background: '#36393e'}> */
   return <>
@@ -56,15 +84,20 @@ const Home = (props) => {
       <Flex gap={4} direction='column'>
         <Text fontSize='3xl' color='green.300'>Dashboard</Text>
         
-        <FlowerList></FlowerList>
+        <FlowerList callback={(i) => setFlowerIndex(i)} data={flowers}></FlowerList>
 
         <Box gap={2} display='flex' rounded='2xl' w='100%' bg='gray.700'>
               <Image w='30%' roundedBottomLeft='2xl' roundedTopLeft='2xl' src='https://www.picclickimg.com/gtkAAOSw5YVkZQpo/Bill-and-Ben-Flower-Pot-men-Weed-Figure.webp' alt='Dan Abramov' />
               <Box w='full'>
-                <p>Teplota vzduchu: {props.fsdata[0].airtemp}°C</p>
-                <p>Vlhkost vzduchu: {props.fsdata[0].airhum}%</p>
-                <p>Světlo v místnosti: {props.fsdata[0].light} Lux</p>
-                <p>Vlhkost půdy: {props.fsdata[0].potmoist}</p>
+                {flowerIndex < flowers.length &&
+                  <>
+                    <h1>{flowers[flowerIndex].name}</h1>
+                    <p>Teplota vzduchu: {flowers[flowerIndex].airtemp}°C</p>
+                    <p>Vlhkost vzduchu: {flowers[flowerIndex].airhum}%</p>
+                    <p>Světlo v místnosti: {flowers[flowerIndex].light} Lux</p>
+                    <p>Vlhkost půdy: {flowers[flowerIndex].potmoist}</p>
+                  </>
+                }
               </Box>
         </Box>
       </Flex>

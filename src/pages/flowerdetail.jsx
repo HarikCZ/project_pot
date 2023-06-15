@@ -8,7 +8,6 @@ const Flowerdetail = ({flowers}) => {
                 <li>{kytka.name}</li>
             </ul>   
         )}
-
     </>
 }
 

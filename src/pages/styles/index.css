@@ -191,6 +191,25 @@
   }
   
 
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
   
-
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #2d3748;
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #4a5568;
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #4a5568;
+  }
   

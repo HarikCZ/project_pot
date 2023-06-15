@@ -33,7 +33,7 @@
 //   pageProps: PropTypes.object.isRequired,
 // };
 
-
+import './styles/index.css'
 import * as React from 'react'
 
 // 1. import `ChakraProvider` component
